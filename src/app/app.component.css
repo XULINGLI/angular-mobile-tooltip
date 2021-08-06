@@ -1,0 +1,17 @@
+.container {
+  width: 500px;
+  height: 300px;
+  position: relative;
+  top: 200px;
+  left: 100px;
+  background-color: powderblue;
+}
+
+.content {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  background-color: brown;
+  left: 60px;
+  top: 30px;
+}

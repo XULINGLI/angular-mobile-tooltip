@@ -1,0 +1,15 @@
+<div #tooltipContainer class="container" (mouseover)="showTooltipContent($event)" (mouseleave)="hideTooltipContent()">
+  this is other content !!
+  <br/>
+  this is other content !!This should only happen while using stackblitz and not a real life project after rc.3
+
+  It is happening due to the recent changes and the major RXJS upgrade from version 6 to 7.
+
+  If you upgrade your Typescript version something greater than 4.2.x, you shouldn't face the issue in a real life project.
+  <div #content *ngIf='showTooltips' class="content">
+    <div class="arrow"></div>
+    <div class="inner">
+      <div> this is tooltip!</div>
+    </div>
+  </div>
+</div>
