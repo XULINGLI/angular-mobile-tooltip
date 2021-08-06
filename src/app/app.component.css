@@ -12,7 +12,7 @@
 }
 
 .content {
-  background-color: pink;
+  background-color: black;
   padding: 10px 0;
   color: white;
   width: 200px;
@@ -25,7 +25,7 @@
   height: 0;
   width: 0;
   position: absolute;
-  left: 47px;
+  left: 32px;
 
   border-top-color: black;
   border-left-color: transparent;

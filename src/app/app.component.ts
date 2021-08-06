@@ -44,12 +44,12 @@ export class AppComponent {
     const tooltipLeft =
       event.clientX -
       this.container.nativeElement.getBoundingClientRect().left -
-      40;
+      28;
     const tooltipTop =
       event.clientY -
       this.container.nativeElement.getBoundingClientRect().top -
       this.tooltip.nativeElement.offsetHeight -
-      12;
+      6;
     const tooltipEle = document.getElementsByClassName('tooltip');
     this.renderer.setStyle(tooltipEle[0], 'top', `${tooltipTop}px`);
     this.renderer.setStyle(tooltipEle[0], 'left', `${tooltipLeft}px`);
