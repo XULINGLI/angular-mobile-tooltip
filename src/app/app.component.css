@@ -7,11 +7,30 @@
   background-color: powderblue;
 }
 
+.tooltip {
+  position: absolute;
+}
+
 .content {
+  background-color: pink;
+  padding: 10px 0;
+  color: white;
   width: 200px;
   height: 100px;
+  margin: 0 0 10px 0;
+}
+
+.arrow {
+  border: 10px solid black;
+  height: 0;
+  width: 0;
   position: absolute;
-  background-color: brown;
-  left: 60px;
-  top: 30px;
+  left: 47px;
+
+  border-top-color: black;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  top: auto;
+  bottom: -10px;
 }

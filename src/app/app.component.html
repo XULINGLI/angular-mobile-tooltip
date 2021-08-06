@@ -6,9 +6,9 @@
   It is happening due to the recent changes and the major RXJS upgrade from version 6 to 7.
 
   If you upgrade your Typescript version something greater than 4.2.x, you shouldn't face the issue in a real life project.
-  <div #content *ngIf='showTooltips' class="content">
+  <div #content *ngIf='showTooltips' class="tooltip">
     <div class="arrow"></div>
-    <div class="inner">
+    <div class="inner" class="content">
       <div> this is tooltip!</div>
     </div>
   </div>

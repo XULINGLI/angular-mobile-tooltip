@@ -1,4 +1,10 @@
-import { Component, ElementRef, VERSION, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  Renderer2,
+  VERSION,
+  ViewChild
+} from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
 
 @Component({
@@ -14,7 +20,7 @@ export class AppComponent {
 
   private mouseMoveListener: Subscription;
 
-  constructor() {}
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {}
 
@@ -35,6 +41,17 @@ export class AppComponent {
     if (!this.showTooltips) {
       return;
     }
-    console.log(this.container.nativeElement.offsetHeight);
+    const tooltipLeft =
+      event.clientX -
+      this.container.nativeElement.getBoundingClientRect().left -
+      40;
+    const tooltipTop =
+      event.clientY -
+      this.container.nativeElement.getBoundingClientRect().top -
+      this.tooltip.nativeElement.offsetHeight -
+      12;
+    const tooltipEle = document.getElementsByClassName('tooltip');
+    this.renderer.setStyle(tooltipEle[0], 'top', `${tooltipTop}px`);
+    this.renderer.setStyle(tooltipEle[0], 'left', `${tooltipLeft}px`);
   }
 }
